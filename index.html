@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Resimli İngilizce Gizlilik ve Destek</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap">
+<style>
+/* Layout: tek sütun belge; üstte uygulama kimliği, iki bölüm (Gizlilik, Destek), sekme gibi çalışan bağlantılar */
+:root {
+  --bg: #ffffff;
+  --surface: #f3f6fc;
+  --fg: #1c2230;
+  --muted: #5d6576;
+  --line: #dde3ee;
+  --accent: #2f6fde;
+  --ok: #1f9d55;
+  --font-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12151c; --surface: #1a1f29; --fg: #e8ebf2; --muted: #9aa3b5; --line: #2b3241; --accent: #7aa5ff; --ok: #4cd08a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12151c; --surface: #1a1f29; --fg: #e8ebf2; --muted: #9aa3b5; --line: #2b3241; --accent: #7aa5ff; --ok: #4cd08a;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg);
+  font: 16px/1.65 var(--font-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 720px; margin: 0 auto; padding-block: 40px 64px; display: flex; flex-direction: column; gap: 28px; }
+header { display: flex; align-items: center; gap: 16px; }
+.tiles { display: flex; gap: 5px; flex: none; }
+.tiles span {
+  width: 30px; height: 36px; border-radius: 7px; border: 3px solid var(--ok); background: var(--bg);
+  display: grid; place-items: center; font: 700 18px var(--font-display); color: var(--ok);
+}
+.tiles span:first-child { border-color: var(--accent); color: var(--accent); }
+h1 { font: 700 clamp(26px, 5vw, 34px)/1.15 var(--font-display); margin: 0; text-wrap: balance; }
+.sub { color: var(--muted); margin: 2px 0 0; font-size: 15px; }
+nav { display: flex; gap: 8px; flex-wrap: wrap; }
+nav a {
+  text-decoration: none; color: var(--fg); border: 1px solid var(--line); border-radius: 999px;
+  padding: 6px 14px; font-weight: 500; font-size: 15px;
+}
+nav a:hover, nav a:focus-visible { border-color: var(--accent); color: var(--accent); outline: none; }
+section { display: flex; flex-direction: column; gap: 6px; }
+h2 { font: 700 24px/1.25 var(--font-display); margin: 8px 0 4px; scroll-margin-top: 16px; }
+h3 { font: 600 17px/1.35 var(--font-body); margin: 18px 0 0; }
+p, li { max-width: 65ch; margin: 0; }
+p + p { margin-top: 10px; }
+ul { margin: 6px 0 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+a { color: var(--accent); }
+.date { color: var(--muted); font-size: 14px; }
+.box {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 16px 18px; display: flex; flex-direction: column; gap: 6px;
+}
+.contact { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.mail { font: 600 17px var(--font-body); user-select: all; word-break: break-all; }
+button {
+  font: 500 14px var(--font-body); color: var(--fg); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; cursor: pointer;
+}
+button:hover, button:focus-visible { border-color: var(--accent); outline: none; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 12px 0; width: 100%; }
+.en { color: var(--muted); }
+.en h2 { color: var(--fg); }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="tiles" aria-hidden="true"><span>c</span><span>a</span><span>t</span></div>
+    <div>
+      <h1>Resimli İngilizce</h1>
+      <p class="sub">Resimlerle 1000 İngilizce kelime öğreten iPhone, iPad ve Android oyunu</p>
+    </div>
+  </header>
+
+  <nav aria-label="Bölümler">
+    <a href="#gizlilik">Gizlilik Politikası</a>
+    <a href="#destek">Destek</a>
+    <a href="#privacy">Privacy (English)</a>
+  </nav>
+
+  <section id="gizlilik" aria-labelledby="h-gizlilik">
+    <h2 id="h-gizlilik">Gizlilik Politikası</h2>
+    <p class="date">Yürürlük tarihi: 19 Kasım 2026</p>
+
+    <p>Bu politika, Resimli İngilizce uygulamasının ("uygulama") hangi bilgileri kullandığını açıklar. Kısaca: uygulama sizden hiçbir kişisel bilgi istemez ve geliştirici olarak biz hiçbir kişisel veri toplamayız. Uygulamadaki reklamları gösteren Google AdMob ise reklam göstermek için bazı cihaz bilgilerini işler; ayrıntıları aşağıda bulabilirsiniz.</p>
+
+    <h3>Bizim topladığımız bilgiler</h3>
+    <ul>
+      <li>Hesap, ad, e-posta, telefon numarası, fotoğraf veya konum istemeyiz.</li>
+      <li>Oyundaki ilerlemeniz (seviye ve puan) yalnızca kendi cihazınızda saklanır. Bize veya başka bir sunucuya gönderilmez.</li>
+      <li>Kelimeler cihazınızın kendi sesleriyle okunur. Uygulama mikrofonu kullanmaz ve ses kaydetmez.</li>
+      <li>Uygulama sizi başka şirketlerin uygulamaları ve web siteleri arasında takip etmez. Bu yüzden "takip izni" penceresi göstermez.</li>
+    </ul>
+
+    <h3>Reklamlar (Google AdMob)</h3>
+    <p>Uygulama ücretsizdir ve Google AdMob aracılığıyla reklam gösterir: ekranın altında bir şerit reklam ve her 10 kelimede bir tam ekran reklam. Reklamları göstermek, ölçmek ve kötüye kullanımı önlemek için Google; cihaz türü, işletim sistemi, uygulama sürümü, IP adresinden çıkarılan yaklaşık konum, reklam etkileşimleri (görüntüleme ve dokunma) ve hata bilgileri gibi verileri işleyebilir.</p>
+    <p>Uygulamayı çocuklar da kullandığı için reklam isteklerini "çocuklara yönelik" olarak işaretledik ve yalnızca genel izleyiciye uygun reklamların gösterilmesini istedik. Bu ayarda Google, ilgi alanına dayalı (kişiselleştirilmiş) reklam göstermez.</p>
+    <p>Google'ın verileri nasıl kullandığını şu sayfalarda okuyabilirsiniz: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik Politikası</a> ve <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google reklamlarında verilerin kullanımı</a>.</p>
+
+    <h3>Çocuklar</h3>
+    <p>Uygulama her yaştan kullanıcıya uygundur. Çocuklardan bilerek kişisel bilgi toplamayız. Reklamlar yukarıda anlatılan çocuklara yönelik ayarla gösterilir.</p>
+
+    <h3>Dış bağlantılar</h3>
+    <p>Kelime fotoğrafları Wikimedia Commons'tan alınmıştır ve uygulamanın içinde bulunur. Bir fotoğrafın altındaki kaynak bağlantısına dokunursanız sayfa tarayıcınızda açılır; o sitenin kendi gizlilik kuralları geçerlidir.</p>
+
+    <h3>Verilerinizi silme</h3>
+    <ul>
+      <li>Oyundaki "Baştan başla" düğmesi ilerlemenizi ve puanınızı siler.</li>
+      <li>Uygulamayı cihazınızdan silerseniz uygulamanın cihazda sakladığı tüm bilgiler de silinir.</li>
+    </ul>
+
+    <h3>Değişiklikler</h3>
+    <p>Bu politikayı güncellersek yeni metni bu sayfada yayınlar ve yürürlük tarihini değiştiririz.</p>
+
+    <h3>İletişim</h3>
+    <p>Gizlilikle ilgili sorularınız için aşağıdaki adrese yazabilirsiniz.</p>
+  </section>
+
+  <div class="box" role="group" aria-label="İletişim adresi">
+    <strong>İletişim</strong>
+    <div class="contact">
+      <span class="mail" id="mail">tazosun@gmail.com</span>
+      <button type="button" id="copy-mail">Kopyala</button>
+    </div>
+  </div>
+
+  <section id="destek" aria-labelledby="h-destek">
+    <h2 id="h-destek">Destek</h2>
+    <p>Bir sorun mu yaşadınız, bir öneriniz mi var? Yukarıdaki adrese e-posta gönderin. Mümkünse cihaz modelinizi ve sorunun hangi kelimede olduğunu yazın.</p>
+
+    <h3>Nasıl oynanır?</h3>
+    <ul>
+      <li>Resme bakın; kelimenin ilk harfi verilir. Kalan harfleri ekrandaki harflere dokunarak yazın.</li>
+      <li>Doğru bildiğiniz kelime, harf sayısı kadar puan kazandırır.</li>
+      <li>Takıldığınız harfin kutusuna dokunursanız o harf açılır; açtığınız her harf için 1 puan eksik kazanırsınız. Kalan harflerin hepsini açarsanız puan kazanmazsınız.</li>
+      <li>Yanlış harf bir hakkınızı götürür. 3 hak biterse kelime açılır ve 1 puan kaybedersiniz.</li>
+      <li>Kelime bitince Türkçe, İspanyolca, Almanca ve Fransızca karşılıkları yazılır ve okunur. Dinlemek istemezseniz ekrana dokunarak sonraki kelimeye geçin.</li>
+    </ul>
+
+    <h3>Sık sorulanlar</h3>
+    <ul>
+      <li><strong>Ses gelmiyor.</strong> Cihazınızın ses seviyesini açın. Uygulama sessiz modda da ses çıkarır. "Dinle" düğmesi kelimeyi yeniden okur.</li>
+      <li><strong>Ses erkek sesi ya da farklı çıkıyor.</strong> Uygulama cihazınızdaki sesleri kullanır. Ayarlar &gt; Erişilebilirlik &gt; Seslendirilen İçerik &gt; Sesler bölümünden İngilizce, İspanyolca, Almanca ve Fransızca için kadın seslerini (örneğin Samantha, Mónica, Anna, Amélie) indirebilirsiniz. Android'de: Ayarlar &gt; Erişilebilirlik &gt; Metin okuma çıkışı &gt; Google ses motoru &gt; Ses verilerini yükle bölümünden bu dillerin seslerini indirebilirsiniz.</li>
+      <li><strong>İlerlemem kayboldu.</strong> İlerleme cihazda saklanır. Uygulamayı silip yeniden yüklerseniz ya da "Baştan başla"ya basarsanız sıfırlanır.</li>
+      <li><strong>İnternet gerekli mi?</strong> Oyun internetsiz çalışır. Reklamlar için internet gerekir.</li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <section id="privacy" class="en" aria-labelledby="h-privacy" lang="en">
+    <h2 id="h-privacy">Privacy Policy (English summary)</h2>
+    <p>Effective date: 19 November 2026.</p>
+    <p>Resimli İngilizce does not ask for or collect any personal information. There is no account. Game progress (level and score) is stored only on your device. Words are spoken with the device's built-in voices; the app does not use the microphone or record audio. The app does not track you across other companies' apps or websites.</p>
+    <p>The app is free and shows ads through Google AdMob (a bottom banner and a full-screen ad every 10 words). To serve and measure ads and prevent fraud, Google may process data such as device type, operating system, app version, approximate location derived from the IP address, ad interactions and diagnostics. Ad requests are tagged as child-directed and limited to general-audience content, so Google does not show interest-based ads. See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+    <p>"Baştan başla" (Start over) deletes your progress; deleting the app removes everything it stored on the device. Contact: tazosun@gmail.com</p>
+  </section>
+</div>
+
+<script>
+document.getElementById('copy-mail').addEventListener('click', function () {
+  var btn = this, text = document.getElementById('mail').textContent;
+  var done = function () { btn.textContent = 'Kopyalandı'; setTimeout(function () { btn.textContent = 'Kopyala'; }, 1600); };
+  var fallback = function () {
+    var r = document.createRange(); r.selectNodeContents(document.getElementById('mail'));
+    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    btn.textContent = 'Seçildi, kopyalayın';
+  };
+  try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+});
+</script>
+</body>
+</html>
